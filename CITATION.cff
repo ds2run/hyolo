@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+preferred-citation:
+  type: software
+  message: If you use this software, please cite it as below.
+  authors:
+  - family-names: Petrov
+    given-names: Daniel
+    orcid: "https://orcid.org/0009-0000-8599-8612"
+  - family-names: Stanchev
+    given-names: Peter
+    orcid: "https://orcid.org/0009-0000-7059-3778"
+  - family-names: Tsenkova
+    given-names: Veska
+    orcid: "https://orcid.org/0009-0009-2827-4146"
+  - family-names: Lazarov
+    given-names: Deyan
+    orcid: "https://orcid.org/0009-0004-3431-1680"    
+  title: "hYOLO Model: Enhancing Object Classification with Hierarchical Context in YOLOv8"
+  date-released: 2025-1-20
+  license: AGPL-3.0
+  url: "https://github.com/ds2run/hyolo"

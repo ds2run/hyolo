@@ -1,0 +1,416 @@
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+# path: /mnt/raid/datasets/smartCart-hierarchical/100class_augm_hier_v2/
+path: ./dataset/Grocery_100_Dataset/
+train: images/train  # train images (relative to 'path') 128 images
+val: images/val  # val images (relative to 'path') 128 images
+test: images/test # test images (optional)
+
+nc: 100
+
+# Classes
+names:
+  0: Sweets-VieterSchmidt-MozartKugeln-297g
+  1: Flour-AgugiaroFigna-Strong-1000g
+  2: Dry-Gin-Savoy-Original-Glass-Alc38-700ml
+  3: Conchigliette-Stella-500g
+  4: Fabric-Softener-Lenor-Lavender-Camomile-1l
+  5: Water-Gorna-Bania-Mineral-PET-1500ml
+  6: Pasta-Seitz-GlutenFree-250g
+  7: Chips-Chio-SourCream&Onion-60g
+  8: Corn-Bonduelle-340g
+  9: Ljutenica-Deroni-520g-Gornotrakiiska-Homemade-Coarse
+  10: Cookies-Merba-Blueberry-175g
+  11: Wet-Wipes-Hankies-Antibacterial-Clean&Protect-72pieces
+  12: Spaghetti-Barilla-N3-500g
+  13: Antibacterial-Medix-Universal-White-Jasmine-1500ml
+  14: Wheat-Krina-500g
+  15: Whiskey-Black-Ram-700ml
+  16: Juice-Rauch-Happy-Day-Orange-Tetra-1l
+  17: Nocciolata-RigoniDiAsiago-Bio-350g
+  18: Cling-Film-Fino-20m
+  19: White-Cheese-Vereia-Cow-400g
+  20: Muesli-Vitalia-Keto-Granola-Nuts-Cinnamon-280g
+  21: Coffee-3in1-Spetema-18g
+  22: Sauce-Barilla-Olive-Glass-400g
+  23: Coffee-Lavazza-CremaEGusto-Powdered-250g
+  24: Yogurt-Vereia-Milk-3perc-400g
+  25: Couscous-SoleMio-500g
+  26: Muesli-Emco-Strawberries-Almond-375g
+  27: Flour-AgugiaroFigna-4H-SelfRaising-1000g
+  28: Mayonnaise-PureNutrition-ZeroSugar&Fat-500ml
+  29: Shampoo-Bionda-Professional-Keratin-ForColored-1000ml
+  30: Jam-RigoniDiAsiago-Strawberry-Bio-250g
+  31: Milk-Bulgaricum-Milk-2perc-1l
+  32: Beer-Elchbaum-Extra-Stout-Can-Alc8-500ml
+  33: Biscuits-Papadopoulos-Plain-Beurre-225g
+  34: Vodka-Savoy-Silver-Premium-Glass-Alc40-1l
+  35: Butter-Elle-Vice-Gourmet-Unsalted-250g
+  36: Muesli-Vitalia-Banana-Chocolate-375g
+  37: Pesto-Barilla-Genovese-190g
+  38: Toilet-Rim-Block-Medix-Pine-55g
+  39: Corny-Big-Dark-Chocolate-50g
+  40: Toilet-Rim-Block-Bref-Duo-Activ-Lemon-3pack-150ml
+  41: MiniCroissant-7days-vanilla-185g
+  42: Rice-Billa-Basmati-500g
+  43: Cat-Food-Purina-Friskies-Sterilized-300g
+  44: Tea-Bioset-Mint-Bags-30g
+  45: Deodorant-Langelica-Soothing-RollOn-50ml
+  46: Salt-Familex-Iodized-1000g
+  47: Water-Devin-Air-Mineral-PET-Sparkling-1500ml
+  48: Garbage-Bags-EP-50l-20pieces
+  49: Muesli-Vitalia-Cholocate-Strawberry-375g
+  50: Butter-President-Unsalted-250g
+  51: Muesli-Vitalia-Apple-Hazelnut-320g
+  52: Biscuits-Vitalia-Digestive-Lemon-Ginger-145g
+  53: Lentils-Pescado-Glass-540g
+  54: Ladyfingers-MatildeVicenzi-200g
+  55: Juice-Ploddy-100-Natural-Apple-Sour-Cherry-Glass-750ml
+  56: Rice-Krina-White-1000g
+  57: Juice-Pfanner-Multivitamin-Tetra-2l
+  58: Vinegar-Apple-Kulinar-700ml
+  59: Biscuits-SLTechnology-DarkChocolate-Beurre-125g
+  60: Vodka-Zytnia-Extra-Glass-Alc38-200ml
+  61: Cereal-Nestle-Fitness-Honey-Almond-355g
+  62: Paprikash-Oro-Glass-680g
+  63: Sprattus-Losos-110g
+  64: Bouillon-Vegetable-Maggie-80g
+  65: Tomatoes-Mutti-Passata-Basil-Glass-700g
+  66: Farfalle-Stella-500g
+  67: Flour-BohlsenerMuehle-Type1050-Bio-1000g
+  68: Vodka-Russian-Standart-Original-Glass-Alc40-700ml
+  69: Soap-Greek-Yoghurt-Fa-90g
+  70: Tahini-Olympos-Cocoa-Bio-300g
+  71: Cookies-Merba-Cranberry-150g
+  72: Fabric-Softener-Cocolino-Blue-Splash-1050ml
+  73: Peas-Sotrko-Can-820g
+  74: Protein-Bar-Bezzo-CookieDough-80g
+  75: Ladyfingers-Bonomi-200g
+  76: Beer-Krombacher-Weizen-Glass-Alc5-500ml
+  77: Olives-Elia-Green-StuffedWithPepper-Glass-360g
+  78: Biscuits-Balocco-Sfogliatine-Peach-200g
+  79: Butter-Deutsche-Markenbutter-250g
+  80: Sauce-Mutti-Verdure-Glass-400g
+  81: Coffee-NovaBrasilia-WithoutCoffein-100g
+  82: Tea-EkoTek-Mint-18g
+  83: QTips-Bamboo-100pieces
+  84: Biscuits-Zakuska-Cocoa-290g
+  85: Pate-WoodsFoods-Bouillon-Veal-720ml
+  86: Kompot-Kompotti-SourCherry-1l
+  87: Wet-Wipes-Hankies-Antibacterial-Clean&Fresh-Lemon-4x15pieces
+  88: Spread-Nutella-700g
+  89: Bread-Crumbs-Picantina-Cornflakes-180g
+  90: Beer-Starobrno-Premium-Chech-Morava-Can-Alc5-500ml
+  91: Dishwashing-Gel-Frosch-Green-Lemon-500ml
+  92: Sauce-DeCecco-Siciliana-Glass-400g
+  93: Wet-Wipes-Bebelan-Aloe-80pieces
+  94: Sprite-Lemon-PET-2l
+  95: Pesto-Sacla-Tomato-190g
+  96: Pesto-Sacla-Rosso-190g
+  97: Cookies-Milka-ChocoGrain-126g
+  98: Red-Rum-Atlantic-Caribbean-Spirit-PET-Alc38-200ml
+  99: Protein-Powder-Nothing&More-Hemp-Organic-150g
+
+
+hierarchy_names: {
+    "0": {
+        "0": "bag",
+        "1": "bottle",
+        "2": "box",
+        "3": "bucket",
+        "4": "can",
+        "5": "cylinder",
+        "6": "irregular",
+        "7": "jar glass",
+        "8": "package"
+    },
+    "1": {
+        "0": "1000g",
+        "1": "1000ml",
+        "2": "100g",
+        "3": "115g",
+        "4": "125g",
+        "5": "140g",
+        "6": "1500ml",
+        "7": "150g",
+        "8": "150ml",
+        "9": "15g",
+        "10": "185g",
+        "11": "195g",
+        "12": "2000ml",
+        "13": "200g",
+        "14": "200ml",
+        "15": "225g",
+        "16": "250g",
+        "17": "280g",
+        "18": "300g",
+        "19": "30g",
+        "20": "335g",
+        "21": "350g",
+        "22": "380g",
+        "23": "400g",
+        "24": "500g",
+        "25": "500ml",
+        "26": "50g",
+        "27": "50ml",
+        "28": "550g",
+        "29": "55g",
+        "30": "650g",
+        "31": "700ml",
+        "32": "70g",
+        "33": "800g",
+        "34": "80g",
+        "35": "90g"
+    },
+    "2": {
+        "0": "antibacterial cleaner",
+        "1": "beer",
+        "2": "biscuits",
+        "3": "bouillon",
+        "4": "bread crumbs",
+        "5": "butter",
+        "6": "cat food",
+        "7": "cereal",
+        "8": "chips",
+        "9": "chocolate candy",
+        "10": "cling film",
+        "11": "coffee",
+        "12": "coffee stick",
+        "13": "cookies",
+        "14": "corn",
+        "15": "couscous",
+        "16": "croissant",
+        "17": "deodorant",
+        "18": "dishwashing gel",
+        "19": "dry gin",
+        "20": "fabric softener",
+        "21": "fish",
+        "22": "flour",
+        "23": "garbage bags",
+        "24": "jam",
+        "25": "juice",
+        "26": "kompot",
+        "27": "ladyfingers",
+        "28": "lentils",
+        "29": "ljutenica",
+        "30": "macaroni",
+        "31": "mayonnaise",
+        "32": "milk",
+        "33": "muesli",
+        "34": "olives",
+        "35": "paprikash",
+        "36": "pate",
+        "37": "peas",
+        "38": "pesto",
+        "39": "protein powder",
+        "40": "qtips",
+        "41": "red rum",
+        "42": "rice",
+        "43": "salt",
+        "44": "sauce",
+        "45": "shampoo",
+        "46": "soap",
+        "47": "soft drink",
+        "48": "spaghetti",
+        "49": "spread",
+        "50": "tahini",
+        "51": "tea",
+        "52": "toilet rim",
+        "53": "tomatoes",
+        "54": "vinegar",
+        "55": "vodka",
+        "56": "wafer like",
+        "57": "water",
+        "58": "wet wipes",
+        "59": "wheat",
+        "60": "whiskey",
+        "61": "white cheese",
+        "62": "yogurt"
+    },
+    "3": {
+        "0": "7days",
+        "1": "aguiro figna",
+        "2": "atlantic",
+        "3": "balocco",
+        "4": "bamboo",
+        "5": "barilla",
+        "6": "bebelan",
+        "7": "bezzo",
+        "8": "billa",
+        "9": "bionda",
+        "10": "bioset",
+        "11": "black ram",
+        "12": "bohlsener muehle",
+        "13": "bonduelle",
+        "14": "bonomi",
+        "15": "bref",
+        "16": "bulgaricum",
+        "17": "chio",
+        "18": "cocolino",
+        "19": "corny",
+        "20": "dececco",
+        "21": "deroni",
+        "22": "deutsche markenbutter",
+        "23": "devin",
+        "24": "ekotek",
+        "25": "elchbaum",
+        "26": "elia",
+        "27": "elle",
+        "28": "emco",
+        "29": "ep",
+        "30": "fa",
+        "31": "familex",
+        "32": "fino",
+        "33": "frosch",
+        "34": "gorna bania",
+        "35": "hankies",
+        "36": "kompotti",
+        "37": "krina",
+        "38": "krombacher",
+        "39": "kulinar",
+        "40": "langelica",
+        "41": "lavazza",
+        "42": "lenor",
+        "43": "losos",
+        "44": "maggie",
+        "45": "matilde vicenzi",
+        "46": "medix",
+        "47": "merba",
+        "48": "milka",
+        "49": "mutti",
+        "50": "nestle",
+        "51": "nothing_more",
+        "52": "nova brasilia",
+        "53": "nutella",
+        "54": "olympus",
+        "55": "oro",
+        "56": "papadopoulos",
+        "57": "pescado",
+        "58": "pfanner",
+        "59": "picantina",
+        "60": "ploddy",
+        "61": "president",
+        "62": "pure nitrition",
+        "63": "purina",
+        "64": "rauch",
+        "65": "rigoni di asiago",
+        "66": "russian standart",
+        "67": "sacla",
+        "68": "savoy",
+        "69": "seitz",
+        "70": "sl technology",
+        "71": "sole mio",
+        "72": "sotrko",
+        "73": "spetema",
+        "74": "sprite",
+        "75": "starobrno",
+        "76": "stella",
+        "77": "vereia",
+        "78": "vieter schmidt",
+        "79": "vitalia",
+        "80": "woods foods",
+        "81": "zakuska",
+        "82": "zytnia"
+    },
+    "4": {
+        "0": "Sweets-VieterSchmidt-MozartKugeln-297g",
+        "1": "Flour-AgugiaroFigna-Strong-1000g",
+        "2": "Dry-Gin-Savoy-Original-Glass-Alc38-700ml",
+        "3": "Conchigliette-Stella-500g",
+        "4": "Fabric-Softener-Lenor-Lavender-Camomile-1l",
+        "5": "Water-Gorna-Bania-Mineral-PET-1500ml",
+        "6": "Pasta-Seitz-GlutenFree-250g",
+        "7": "Chips-Chio-SourCream&Onion-60g",
+        "8": "Corn-Bonduelle-340g",
+        "9": "Ljutenica-Deroni-520g-Gornotrakiiska-Homemade-Coarse",
+        "10": "Cookies-Merba-Blueberry-175g",
+        "11": "Wet-Wipes-Hankies-Antibacterial-Clean&Protect-72pieces",
+        "12": "Spaghetti-Barilla-N3-500g",
+        "13": "Antibacterial-Medix-Universal-White-Jasmine-1500ml",
+        "14": "Wheat-Krina-500g",
+        "15": "Whiskey-Black-Ram-700ml",
+        "16": "Juice-Rauch-Happy-Day-Orange-Tetra-1l",
+        "17": "Nocciolata-RigoniDiAsiago-Bio-350g",
+        "18": "Cling-Film-Fino-20m",
+        "19": "White-Cheese-Vereia-Cow-400g",
+        "20": "Muesli-Vitalia-Keto-Granola-Nuts-Cinnamon-280g",
+        "21": "Coffee-3in1-Spetema-18g",
+        "22": "Sauce-Barilla-Olive-Glass-400g",
+        "23": "Coffee-Lavazza-CremaEGusto-Powdered-250g",
+        "24": "Yogurt-Vereia-Milk-3perc-400g",
+        "25": "Couscous-SoleMio-500g",
+        "26": "Muesli-Emco-Strawberries-Almond-375g",
+        "27": "Flour-AgugiaroFigna-4H-SelfRaising-1000g",
+        "28": "Mayonnaise-PureNutrition-ZeroSugar&Fat-500ml",
+        "29": "Shampoo-Bionda-Professional-Keratin-ForColored-1000ml",
+        "30": "Jam-RigoniDiAsiago-Strawberry-Bio-250g",
+        "31": "Milk-Bulgaricum-Milk-2perc-1l",
+        "32": "Beer-Elchbaum-Extra-Stout-Can-Alc8-500ml",
+        "33": "Biscuits-Papadopoulos-Plain-Beurre-225g",
+        "34": "Vodka-Savoy-Silver-Premium-Glass-Alc40-1l",
+        "35": "Butter-Elle-Vice-Gourmet-Unsalted-250g",
+        "36": "Muesli-Vitalia-Banana-Chocolate-375g",
+        "37": "Pesto-Barilla-Genovese-190g",
+        "38": "Toilet-Rim-Block-Medix-Pine-55g",
+        "39": "Corny-Big-Dark-Chocolate-50g",
+        "40": "Toilet-Rim-Block-Bref-Duo-Activ-Lemon-3pack-150ml",
+        "41": "MiniCroissant-7days-vanilla-185g",
+        "42": "Rice-Billa-Basmati-500g",
+        "43": "Cat-Food-Purina-Friskies-Sterilized-300g",
+        "44": "Tea-Bioset-Mint-Bags-30g",
+        "45": "Deodorant-Langelica-Soothing-RollOn-50ml",
+        "46": "Salt-Familex-Iodized-1000g",
+        "47": "Water-Devin-Air-Mineral-PET-Sparkling-1500ml",
+        "48": "Garbage-Bags-EP-50l-20pieces",
+        "49": "Muesli-Vitalia-Cholocate-Strawberry-375g",
+        "50": "Butter-President-Unsalted-250g",
+        "51": "Muesli-Vitalia-Apple-Hazelnut-320g",
+        "52": "Biscuits-Vitalia-Digestive-Lemon-Ginger-145g",
+        "53": "Lentils-Pescado-Glass-540g",
+        "54": "Ladyfingers-MatildeVicenzi-200g",
+        "55": "Juice-Ploddy-100-Natural-Apple-Sour-Cherry-Glass-750ml",
+        "56": "Rice-Krina-White-1000g",
+        "57": "Juice-Pfanner-Multivitamin-Tetra-2l",
+        "58": "Vinegar-Apple-Kulinar-700ml",
+        "59": "Biscuits-SLTechnology-DarkChocolate-Beurre-125g",
+        "60": "Vodka-Zytnia-Extra-Glass-Alc38-200ml",
+        "61": "Cereal-Nestle-Fitness-Honey-Almond-355g",
+        "62": "Paprikash-Oro-Glass-680g",
+        "63": "Sprattus-Losos-110g",
+        "64": "Bouillon-Vegetable-Maggie-80g",
+        "65": "Tomatoes-Mutti-Passata-Basil-Glass-700g",
+        "66": "Farfalle-Stella-500g",
+        "67": "Flour-BohlsenerMuehle-Type1050-Bio-1000g",
+        "68": "Vodka-Russian-Standart-Original-Glass-Alc40-700ml",
+        "69": "Soap-Greek-Yoghurt-Fa-90g",
+        "70": "Tahini-Olympos-Cocoa-Bio-300g",
+        "71": "Cookies-Merba-Cranberry-150g",
+        "72": "Fabric-Softener-Cocolino-Blue-Splash-1050ml",
+        "73": "Peas-Sotrko-Can-820g",
+        "74": "Protein-Bar-Bezzo-CookieDough-80g",
+        "75": "Ladyfingers-Bonomi-200g",
+        "76": "Beer-Krombacher-Weizen-Glass-Alc5-500ml",
+        "77": "Olives-Elia-Green-StuffedWithPepper-Glass-360g",
+        "78": "Biscuits-Balocco-Sfogliatine-Peach-200g",
+        "79": "Butter-Deutsche-Markenbutter-250g",
+        "80": "Sauce-Mutti-Verdure-Glass-400g",
+        "81": "Coffee-NovaBrasilia-WithoutCoffein-100g",
+        "82": "Tea-EkoTek-Mint-18g",
+        "83": "QTips-Bamboo-100pieces",
+        "84": "Biscuits-Zakuska-Cocoa-290g",
+        "85": "Pate-WoodsFoods-Bouillon-Veal-720ml",
+        "86": "Kompot-Kompotti-SourCherry-1l",
+        "87": "Wet-Wipes-Hankies-Antibacterial-Clean&Fresh-Lemon-4x15pieces",
+        "88": "Spread-Nutella-700g",
+        "89": "Bread-Crumbs-Picantina-Cornflakes-180g",
+        "90": "Beer-Starobrno-Premium-Chech-Morava-Can-Alc5-500ml",
+        "91": "Dishwasging-Gel-Frosch-Green-Lemon-500ml",
+        "92": "Sauce-DeCecco-Siciliana-Glass-400g",
+        "93": "Wet-Wipes-Bebelan-Aloe-80pieces",
+        "94": "Sprite-Lemon-PET-2l",
+        "95": "Pesto-Sacla-Tomato-190g",
+        "96": "Pesto-Sacla-Rosso-190g",
+        "97": "Cookies-Milka-ChocoGrain-126g",
+        "98": "Red-Rum-Atlantic-Caribbean-Spirit-PET-Alc38-200ml",
+        "99": "Protein-Powder-Nothing&More-Hemp-Organic-150g"
+    }
+}
